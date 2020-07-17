@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/extras">
+        <file>src/extras/cursive-background.jpg</file>
+        <file>src/extras/shakespeare_word_analyzer.icns</file>
+        <file>src/extras/shakespeare-words.txt</file>
+        <file>src/extras/shake-word-analyzer-logo.png</file>
+        <file>src/extras/shakespeare-word-analyzer-icon.ico</file>
+    </qresource>
+</RCC>
