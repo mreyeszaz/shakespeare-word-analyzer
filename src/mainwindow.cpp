@@ -138,3 +138,8 @@ void MainWindow::onSpinBoxValueChanged() // slot
 }
 
 
+
+void MainWindow::on_leoButton_clicked()
+{
+    cout << "Leo is the BEST!" << endl;
+}

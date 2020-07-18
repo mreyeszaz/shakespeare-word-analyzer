@@ -21,6 +21,8 @@ private slots:
     void on_btn_find_word_clicked();
     void onSpinBoxValueChanged();
 
+    void on_leoButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
