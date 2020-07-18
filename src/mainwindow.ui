@@ -155,7 +155,7 @@
         </property>
        </widget>
       </item>
-      <item alignment="Qt::AlignLeft">
+      <item>
        <widget class="QSpinBox" name="spnbx_word_length">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
