@@ -194,6 +194,11 @@
 	selection-background-color: darkgray;
 }
 
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 18px;
+    height: 16px;
+}
+
 
 
 </string>
@@ -339,7 +344,10 @@
 	selection-background-color: darkgray;
 }
 
-</string>
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 18px;
+    height: 16px;
+}</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
