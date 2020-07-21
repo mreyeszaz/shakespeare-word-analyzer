@@ -1,0 +1,4 @@
+#ifndef ORDINALNUMBER_H
+#define ORDINALNUMBER_H
+
+#endif // ORDINALNUMBER_H
