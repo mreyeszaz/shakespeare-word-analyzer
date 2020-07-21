@@ -22,6 +22,7 @@ SOURCES += \
 
 HEADERS += \
     include/mainwindow.h \
+    include/ordinalNumber.h \
     include/vectorList.h
 
 FORMS += \

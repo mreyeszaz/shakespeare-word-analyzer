@@ -29,13 +29,13 @@ void VectorList::insertExistence(string wordToInsert){
     @return bool Boolean that states whether n1 comes before n2 or not.
 */
 bool compareNodes(const Node* n1, const Node* n2)
-{ 
+{
     return n1->frequency > n2->frequency ||
         (n1->frequency == n2->frequency && n1->word < n2->word);
-} 
+}
 
 /**
-    Transfers all Node pointers from wordExistence into vectorList and finally sorts then Node pointers.
+    Transfers all Node pointers from wordExistence into vectorList and finally sorts the Node pointers.
     @param N/A.
     @return bool Boolean that states whether n1 comes before n2 or not.
 */
@@ -74,7 +74,7 @@ int VectorList::length(){
 }
 
 /**
-    Gets the length of thelongest word found in vectorList
+    Gets the length of the longest word found in vectorList
     @param N/A.
     @return Longest word length
 */
@@ -119,4 +119,62 @@ void VectorList::printLength(int wordLength){
         cout << i->word << "     " << "Frequency: " << i->frequency << endl;
     }
     
+}
+
+/**
+  Gets the commonality and number of occurrences of a word if found in vectorList
+  @param word The word being searched for.
+  @return A pair of ints that represents the commonality and number of occurrences.
+          If word too long or not found, -1 or -2 will be returned in a pair.
+ */
+pair<int, int> VectorList::searchWord(string word){
+    int length = word.length();
+    if(length > this->getLongestLength()){
+        return make_pair(-1, -1);
+    }
+    if(length < 5){
+        return make_pair(-2, -2);
+    }
+
+    int commonality = 0;
+    for(auto i : vectorList[length]){
+        if(i->word == word)
+            return make_pair(commonality, i->frequency);
+
+        commonality++;
+    }
+    return make_pair(-1, -1);
+}
+
+void VectorList::getBiggerPicture(){
+    for(int i = 0; (unsigned) i < vectorList.size(); i++){
+        for(auto j : vectorList[i]){
+            allWords.insert(j);
+        }
+    }
+
+    int indexCounter = 0;
+    for(auto i : allWords){
+        i->index = indexCounter;
+        indexCounter++;
+    }
+}
+
+Node* VectorList::searchBarWordFinder(string word){
+
+    int strLength = word.size();
+    if(strLength < 5){
+        Node* n = new Node();
+        n->index = -2;
+        return n;
+    }
+
+    for(auto i: allWords){
+        if(i->word == word)
+            return i;
+    }
+
+    Node* n = new Node();
+    n->index = -1;
+    return n;
 }

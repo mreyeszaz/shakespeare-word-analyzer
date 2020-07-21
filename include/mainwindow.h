@@ -18,10 +18,15 @@ public:
 
 
 private slots:
-    void on_btn_find_word_clicked();
+    void on_btn_find_clicked();
+
     void onSpinBoxValueChanged();
 
-    void on_leoButton_clicked();
+    void on_btn_search_bar_clicked();
+
+    void on_btn_return_p2_clicked();
+
+    void on_btn_find_p2_clicked();
 
 private:
     Ui::MainWindow *ui;
