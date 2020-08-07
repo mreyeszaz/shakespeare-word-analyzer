@@ -1,0 +1,4 @@
+#ifndef WORDSEPARATOR_H
+#define WORDSEPARATOR_H
+
+#endif // WORDSEPARATOR_H
